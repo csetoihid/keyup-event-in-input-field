@@ -1,0 +1,7 @@
+$('.category_amount').bind('keyup paste', function(){
+       this.value = this.value.replace(/[^0-9]/g, '');
+       var input = this.value;
+       var max = $(this).attr('max');
+       if(input > max){ $(this).val(max); }
+       if(input < 1){ $(this).val(0);} 
+  });
